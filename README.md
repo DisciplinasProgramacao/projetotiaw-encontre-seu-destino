@@ -7,7 +7,7 @@ recomendar os melhores destinos possíveis de acordo com suas preferências.
 ## Alunos integrantes da equipe
 
   * Lucas Alexandre Machado Costa
-* Nome completo do aluno 2
+* Rafael Vinícius da Silva
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 * Nome completo do aluno 4
