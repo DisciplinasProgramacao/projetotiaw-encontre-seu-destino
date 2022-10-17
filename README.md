@@ -8,7 +8,7 @@ recomendar os melhores destinos possíveis de acordo com suas preferências.
 
   * Lucas Alexandre Machado Costa
 * Rafael Vinícius da Silva
-* Nome completo do aluno 3
+* Arthur Damaceno dos Santos Pereira
 * Nome completo do aluno 4
 * Nome completo do aluno 4
 * Nome completo do aluno 4
