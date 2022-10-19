@@ -9,8 +9,7 @@ recomendar os melhores destinos possíveis de acordo com suas preferências.
   * Lucas Alexandre Machado Costa
 * Rafael Vinícius da Silva
 * Arthur Damaceno dos Santos Pereira
-* Nome completo do aluno 4
-* Nome completo do aluno 4
+* Joao Paulo Aguiar
 * Nome completo do aluno 4
 
 ## Professores responsáveis
@@ -19,7 +18,7 @@ recomendar os melhores destinos possíveis de acordo com suas preferências.
 * Lucas Gabriel da Silva Felix
 
 ## Quadro de tarefas
-Coloque aqui o link para acesso do Kanban do projeto, seja ele no GitHub ou em outra plataforma.
+<https://github.com/orgs/DisciplinasProgramacao/projects/44/views/1>
 
 ## Instruções para uso
 Coloque aqui as instruções para acessar a página inicial do projeto (caminho completo do arquivo).
