@@ -10,7 +10,6 @@ recomendar os melhores destinos possíveis de acordo com suas preferências.
 * Rafael Vinícius da Silva
 * Arthur Damaceno dos Santos Pereira
 * Joao Paulo Aguiar
-* Nome completo do aluno 4
 
 ## Professores responsáveis
 
