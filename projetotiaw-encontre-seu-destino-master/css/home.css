@@ -1,0 +1,64 @@
+*{
+    list-style:none;
+  }
+.barra_navegação{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: #FFFF;
+}
+
+.nav_home{
+text-decoration: none;
+background-color: #FFFF;
+
+}
+
+.nav_login{
+    text-decoration: none;
+    
+}
+
+.rodape{
+    margin-top: 10px;
+    background: #60BDE1;
+    color: white;
+}
+
+.row{
+    font-size:large;
+    display: flex;
+}
+
+.footer_area{
+    text-align:center;
+}
+
+.footer_area_nome{
+    text-align: center;
+}
+
+
+.container-fluid{
+    background-color: #FFFF;
+}
+
+.menu-item{
+    display: inline;
+  margin-left: 20px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+h7{
+    font-size: 34px;
+    padding: 10px 0;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  h8, h9{
+    font-size: 30px;
+  }
