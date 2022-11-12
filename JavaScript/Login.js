@@ -1,41 +1,70 @@
-let pessoa = {nome: 'Matheus', idade: 29}
-
-// Transformar o objeto em string e salvar em localStorage
-localStorage.setItem('pessoa', JSON.stringify(pessoa));
-
-// Receber a string
-let pessoaString = localStorage.getItem('pessoa');
-
-// transformar em objeto novamente
-let pessoaObj = JSON.parse(pessoaString);
-
-console.log(pessoaObj.nome); // Matheus
-
 
 
 // Cadastro
-function nome_cad(){
-var nome_cad = document.getElementById("nome_cad");
-var email_cad = document.getElementById("email_cad");
-var senha_cad = document.getElementById("senha-cad");
 
-var dados =  JSON.parse(localStorage.getItem("cadastro"));
+var bancoCadastros = JSON.parse(localStorage.getItem("cadastro"));
 
-if(dados == null){
-    localStorage.setItem("cadastro", "[]");
-    dados = [];
+
+
+function limparForm() {
+    document.getElementById("name1").value = "";
+    document.getElementById("email1").value = "";
+    document.getElementById("senha1").value = "";
+
 
 }
 
-var auxRegistro = {
-    nome: nome_cad.value,
-    email: email_cad.value,
-    senha: senha_cad.value,
+function cadastrarNovo() {
+    var name1 = document.getElementById("name1").value;
+    var email1 = document.getElementById("email1").value;
+    var password1 = document.getElementById("senha1").value;
+  
+    var novoCadastro = {
+        "nome": name1,
+        "email": email1,
+        "senha": password1,
+       
+    }
+    
+    bancoCadastros.push(novoCadastro);
+    localStorage.setItem("cadastros", JSON.stringify(bancoCadastros));
+    
+    limparForm();
 
-    dados.push('auxRegistro'),
 
-    localStorage.setItem("cadastro", JSON.stringify(dados)),
 }
 
 
+function logar(){
+    var emailcad = document.getElementById("email").value;
+    var senhacad = document.getElementById("senha").value;
+    
+    let listaUser = []
+
+    var Uservalid = {
+        nome: '',
+        email: '',
+        senha: '',
+    
+    }
+    
+    listaUser = JSON.parse(localStorage.getItem("cadastro"));
+    listaUser.forEach ((item) => {
+            if(emailcad == item.email && senhacad == item.senha) {
+                Uservalid = {
+                    nome: item.nome,
+                    email: item.email,
+                    senha: item.senha,
+                                   }
+            }
+        }
+    )
+    
+
+    if (emailcad == Uservalid.email && senhacad == Uservalid.senha) {
+        alert("LOGADO");
+        location.href="pokedex.html";
+    } else {
+        alert("USUÁRIO INCORRETO");
+    }
 }
