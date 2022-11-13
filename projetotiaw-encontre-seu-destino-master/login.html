@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encontre Seu Destino - Home</title>
+  <link href="./css/login.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+   <!--NavBar-->
+
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src= "assets/LOGO.png" alt="" width="180" height="90" class="d-inline-block align-text-center">
+    
+      </a>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar destino" aria-label="Search">
+      </br></br>
+        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+      </form>
+      <div style="text-align: right;"> 
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="catalago.html">Pacotes</a>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Conectar</a>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="cadastro.html"></a> <!-- oculto sem texto -->     
+                 </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+</head>
+
+
+<htmlscript src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+  
+    
+
+  <!--img de fundo-->
+    <style> 
+    body{ 
+      
+      background-image: url("assets/travel5.jpg") ; 
+      background-repeat: no-repeat;
+      background-size:50%;
+    }
+    </style>
+        
+      
+   
+    <div class="container" >
+      <a class="links" id="paracadastro"></a>
+      <a class="links" id="paralogin"></a>
+      
+      <div class="content">    
+    
+        
+        <!--FORMULÁRIO DE LOGIN-->
+
+   
+        <div id="login">
+          <form method="post" action=""> 
+      
+            <h1>Login</h1> 
+            <p> 
+              <label for="email_login">Seu e-mail</label>
+              <input id="email_login" name="email_login" required="required" type="text" placeholder="contato@htmlecsspro.com"/>
+            </p>
+            
+            <p> 
+              <label for="senha_login">Sua senha</label>
+              <input id="senha_login" name="senha_login" required="required" type="password" placeholder="1234" /> 
+            </p>
+            
+            <p> 
+              <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+              <label for="manterlogado">Manter-me logado</label>
+            </p>
+            
+            <p> 
+              <input type="submit" onclick="cadastro()" value="Logar"> 
+            </p>
+            
+            <p class="link">
+              Ainda não tem conta?
+              <a href="#paracadastro">Cadastre-se</a>
+            </p>
+          </form>
+        </div>
+
+        
+        <!--FORMULÁRIO DE CADASTRO-->
+      
+        <div id="cadastro">
+          <form method="post" action=""> 
+            <h1>Cadastro</h1> 
+            
+            <p> 
+              <label for="nome_cad">Seu nome</label>
+              <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Luiz Augusto" />
+            </p>
+            
+            <p> 
+              <label for="email_cad">Seu e-mail</label>
+              <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com"/> 
+            </p>
+            
+            <p> 
+              <label for="senha_cad">Sua senha</label>
+              <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="1234"/>
+            </p>
+            
+            <p> 
+              <input type="submit" value="Cadastrar"/> 
+            </p>
+            
+            <p class="link">  
+              Já tem conta?
+              <a href="#paralogin"> Ir para Login </a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div> 
+  </div>
