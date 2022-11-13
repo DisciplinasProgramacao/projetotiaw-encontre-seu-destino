@@ -30,12 +30,12 @@ if(dados == null){
 var auxRegistro = {
     nome: nome_cad.value,
     email: email_cad.value,
-    senha: senha_cad.value,
-
-    dados.push('auxRegistro'),
-
-    localStorage.setItem("cadastro", JSON.stringify(dados)),
+    senha: senha_cad.value, 
 }
 
+    dados.push('auxRegistro');
 
-}
+    localStorage.setItem("cadastro", JSON.stringfy(dados));}
+
+
+
