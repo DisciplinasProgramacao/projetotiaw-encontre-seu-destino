@@ -110,7 +110,7 @@
   input[type="submit"]{
     width: 100%!important;
     cursor: pointer;  
-    background: #3d9db3;
+    background: #489ADD;
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;  
@@ -166,7 +166,7 @@
   #cadastro, 
   #login{
     position: absolute;
-    top: 10px; left: 400px;
+    top: center; left: center;
     width: 88%; 
     padding: 18px 6% 60px 6%;
     margin: 0 0 35px 0;
