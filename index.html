@@ -26,10 +26,12 @@
 
       </a>
 
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar destino" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-      </form>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar destino" id="inputPesquisa" aria-label="Search">
+          <button class="btn btn-outline-success" onclick="pesquisar()" type="submit">Pesquisar</button>
+          <p id="pesq"></p>
+        </form>
+        
       <div style="text-align: right;">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -322,6 +324,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="JavaScript/Busca.js"></script>
 
 </body>
 
