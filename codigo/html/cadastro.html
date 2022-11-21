@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encontre seu Destino - Cadastro</title>
+  <link href="/codigo/css/cadastro.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+     <!--NavBar-->
+
+     <!--NavBar-->
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src= "/codigo/assets/LOGO.png" alt="" width="180" height="90" class="d-inline-block align-text-center">
+    
+      </a>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar destino" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+      </form>
+      <div style="text-align: right;"> 
+        
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Conectar</a>
+            
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="cadastro.html">Form</a>
+            </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </nav>
+    
+
+    <body>
+      <div style="text-align: center;"> 
+
+      <center><h1>Cadastro do usuário</h1></center>
+      <div id="Dadospessoais">
+      Nome
+      <input class="Nome" type="text" placeholder="Seu nome" 
+      aria-label=".form-control-sm example">
+      Sobrenome
+      <input class="Nome" type="text" placeholder="Seu sobrenome" 
+      aria-label=".form-control-sm example">
+      <br>
+      Data de nascimento
+      <input class="Nome" type="Date">
+      <br>
+      CPF
+      <input class="cpf" type="text" placeholder="000.000.000-00">
+      <br>
+      CEP:
+      <input type="text" class="CEP" placeholder="00000-000">
+      <br>
+      Nº
+      <input type="number" class="numero">
+      <br>
+      Complemento
+      <input type="text" class="Complemento">
+      <br>
+      E-mail
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="seuemail@email.com">
+      <br>
+      DDD<input type="text class="DDD" placeholder="000">
+      Telefone
+      <input type="text" class="telefone" placeholder="98888-9999">
+      <br>
+      Estado civil
+      <label class="estadocivil">
+          <select>
+            <option></option>
+            <option>Solteiro (a)</option>
+            <option>Namorando (a)</option>
+            <option>Noivo (a)</option>
+            <option>Casado (a)</option>
+            <option>Divorciado (a)</option>
+            <option>Viúvo (a)</option>
+          </select>
+        </label>
+       <br>
+      Profissão
+      <input type="text" class="profissao">
+      <br>
+      Nº de filhos
+      <input type="number" class="numerodefilhos">
+      </div>
+      
+      
+      <div id="Preferencias">
+      Ambiente preferido
+         <label class="ambientepreferido">
+              <select>
+                <option></option>
+                <option>Agitado</option>
+                <option>Social</option>
+                <option>Familiar</option>
+                <option>Calmo</option>
+              </select>
+            </label>
+           <br>
+      Clima preferido
+      
+        <label class="climapreferido">
+            <select>
+              <option></option>
+              <option>Quente</option>
+              <option>Seco</option>
+              <option>Frio</option>
+              <option>Úmido</option>
+            </select>
+          </label>
+          <br>
+      Horário preferido para lazer
+          <input type="checkbox" value="">
+          <label>
+              Diurno
+          </label>
+          <input type="checkbox" value="">
+          <label>
+              Noturno
+          </label>
+      <br>
+      Orçamento disponível
+      <input type="text class="orçamento" placeholder="R$ 00,00">
+      <br>
+      Época em que deseja viajar
+      
+      <label class="epocaemquedesejaviajar">
+          <select>
+            <option></option>
+            <option>Alta temporada</option>
+            <option>Baixa temporada</option>
+          </select>
+        </label>
+        <br>
+      
+      Tempo estimado para chegada ao destino:
+      <input type="text class="tempodeviagem" placeholder="00:00">
+      
+      <br>
+      <br>
+      <div id="tiposdepasseio">
+      Passeios que gostaria de fazer em sua viagem:
+      <br>
+      <input type="checkbox" value="">
+      <label>ecológico</label>
+      <input type="checkbox" value="">
+      <label>no litoral</label>
+      <input type="checkbox" value="">
+      <label>cultural</label>
+      <br>
+      <input type="checkbox" value="">
+      <label>no campo</label>
+      <input type="checkbox" value="">
+      <label>aventura</label>
+      <br>
+      <input type="checkbox" value="">
+      <label>práticas de yoga e meditação</label>
+      <input type="checkbox" value="">
+      <label>gastronômico</label>
+      </div>
+      
+      
+      
+      <br>
+      </div>
+      </div>
+      </body>
+
+
+    </div>
+     
+
+
+
+
+
+
+
+
+
+
+    
