@@ -4,6 +4,21 @@
  Encontre seu Destino é um projeto para facilitar o processo da viagem a lazer, nosso objetivo é oferecer diversas opções para sua viagem além de
 recomendar os melhores destinos possíveis de acordo com suas preferências.
 
+# Requisitos cumpridos: 30/100
+  - sem api
+  - página de perfil com dados fixos
+    
+## Comentários da correção
+
+No código que está aqui no master, **login e cadastro continuam sem funcionar**. Da mesma maneira, o perfil carregado está fixo. Tudo isso está diminuindo, e bastante, a nota do grupo.
+
+Boa ideia na página de pesquisa por "cidades". Como são limitadas, talvez seria mais legal se fosse uma caixa de seleção, ao invés de texto livre. 
+
+Não detectei nem mesmo a tentativa de uso da API.
+
+Até hoje não temos instruções aqui no readme sobre qual arquivo deve ser acessado para iniciar o uso da página.
+
+
 ## Alunos integrantes da equipe
 
   * Lucas Alexandre Machado Costa
