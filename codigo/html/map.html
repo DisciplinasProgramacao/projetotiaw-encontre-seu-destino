@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encontre Seu Destino - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="home.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  
+    <title>Complex Marker Icons</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>
+      
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: { lat: -33.9, lng: 151.2 },
+        });
+
+        setMarkers(map);
+      }
+
+      const beaches = [
+        ["Bondi Beach", -33.890542, 151.274856, 4],
+        ["Coogee Beach", -33.923036, 151.259052, 5],
+        ["Cronulla Beach", -34.028249, 151.157507, 3],
+        ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
+        ["Maroubra Beach", -33.950198, 151.259302, 1],
+      ];
+
+      function setMarkers(map) {
+        const image = {
+          url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+          size: new google.maps.Size(20, 32),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(0, 32),
+        };
+        const shape = {
+          coords: [1, 1, 1, 20, 18, 20, 18, 1],
+          type: "poly",
+        };
+
+        for (let i = 0; i < beaches.length; i++) {
+          const beach = beaches[i];
+
+          new google.maps.Marker({
+            position: { lat: beach[1], lng: beach[2] },
+            map,
+            icon: image,
+            shape: shape,
+            title: beach[0],
+            zIndex: beach[3],
+          });
+        }
+      }
+
+      window.initMap = initMap;
+    </script>
+    <style>
+     
+      #map {
+        height: 100%;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+      <!--NavBar-->
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://drive.google.com/uc?export=download&id=1aXBWmrAdCzO7lVD5pLbMToTenYj-zNL_" alt="" width="180" height="90" class="d-inline-block align-text-center">
+
+      </a>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          ENCONTRAR LUGARES
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="ba.html">Bahia</a></li>
+          <li><a class="dropdown-item" href="ma.html">Maranhão</a></li>
+          <li><a class="dropdown-item" href="pr.html">Paraná</a></li>
+          <li><a class="dropdown-item" href="rj.html">Rio de Janeiro</a></li>
+          <li><a class="dropdown-item" href="rr.html">Roraima</a></li>
+          <li><a class="dropdown-item" href="rs.html">Rio Grande do Sul</a></li>
+          <li><a class="dropdown-item" href="sp.html">São Paulo</a></li>
+        </ul>
+      </li>
+    
+      <div style="text-align: right;">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="catalago.html">Pacotes</a>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login.html">Conectar</a>
+            </li>           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <p><br>
+    <h1 class="text-center"> Mapa </h1>
+    <p>
+    <h5>
+      <div class="text-center"> Encontre seu destino pelo nosso mapa </div>
+      </p>
+    </h5>
+    <section class="row align-items-center">
+      <p></p></div>
+
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFHSHXXRbvtXQqugNW72gZmioVPOVh8gc&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
