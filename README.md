@@ -7,7 +7,11 @@ recomendar os melhores destinos possíveis de acordo com suas preferências.
 # Requisitos cumpridos: 30/100
   - sem api
   - página de perfil com dados fixos
-    
+
+# Nota de apresentação 85/100
+
+**Importante:** A nota-base do grupo é calculada a partir das porcentagens acima. A nota individual leva em consideração ainda a nota de acompanhamento nas reuniões de grupos, a participação efetiva nas tarefas e commits e os descontos por falta nas reuniões. 
+
 ## Comentários da correção
 
 No código que está aqui no master, **login e cadastro continuam sem funcionar**. Da mesma maneira, o perfil carregado está fixo. Tudo isso está diminuindo, e bastante, a nota do grupo.
