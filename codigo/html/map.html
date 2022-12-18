@@ -6,7 +6,7 @@
     <title>Encontre Seu Destino - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="home.css" rel="stylesheet">
+    <link href="catalago.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   
@@ -16,19 +16,19 @@
       
       function initMap() {
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 10,
-          center: { lat: -33.9, lng: 151.2 },
+          zoom: 5,
+          center: { lat: -29.3, lng: -50.92 },
         });
 
         setMarkers(map);
       }
 
       const beaches = [
-        ["Bondi Beach", -33.890542, 151.274856, 4],
-        ["Coogee Beach", -33.923036, 151.259052, 5],
-        ["Cronulla Beach", -34.028249, 151.157507, 3],
-        ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
-        ["Maroubra Beach", -33.950198, 151.259302, 1],
+        ["Thermas", -29.386720895570193, -50.929860802612865],
+        ["Pão de Açucar", -22.95549353449818, -43.167036896911895],
+        ["Jardim Botânico",-22.963512566477338, -43.222293987838604],
+        ["Tivoli", -23.563618989048937, -46.65587060332001],
+        ["Ilhas", -12.783646820731738, -38.63719219721245],
       ];
 
       function setMarkers(map) {
@@ -62,13 +62,13 @@
     <style>
      
       #map {
-        height: 100%;
+        height: 70%;
       }
 
       html,
       body {
         height: 100%;
-        margin: 0;
+        margin: 0px;
         padding: 0;
       }
     </style>
@@ -115,6 +115,13 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="catalago.html">Pacotes</a>
 
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="map.html">Nosso Mapa</a>
+
+                
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a>
+                
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="login.html">Conectar</a>
             </li>           
@@ -140,5 +147,61 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFHSHXXRbvtXQqugNW72gZmioVPOVh8gc&callback=initMap&v=weekly"
       defer
     ></script>
+
+    <!--Rodape-->
+    <footer>
+      <div class="rodape">
+
+        <div class="row p-5 ">
+
+
+          <div class="col-sm-12  col-md-4 text-start">
+            <ul>
+              <h5>Encontre Seu Destino</h5>
+              <li>
+                <a class="nav-link active" aria-current="page" href="#">Sobre nós</a>
+              </li>
+
+              <li>
+                <a class="nav-link active" aria-current="page" href="#">Termos</a>
+              </li>
+              
+              <li>
+                <a class="nav-link active" aria-current="page" href="#">Central de Ajuda</a>
+              </li>
+
+            </ul>
+
+
+          </div>
+
+
+          <div class="col p-3 col-sm-12  col-md-4  footer_area_nome">
+            ENCONTRE SEU DESTINO  <br> Trabalho academico Puc Minas - 2022
+          </div>
+
+
+          <div class="col-sm-12  col-md-4 text-end">
+            <h5>Contato</h5>
+            <ul>
+              <li>E-mail: central@gmail.com.br</li>
+              <li>SAC 31 9121 8987</li>
+              
+              <h5 class="py-3">Redes Sociais</h5>
+              <div>
+                  <img src="https://drive.google.com/uc?export=download&id=1f55YLPhDNiiwP83Hsw8dUgkyhdLefnWS">
+                  <img src="https://drive.google.com/uc?export=download&id=1TKb1suA-TIHXQQv19nuChUvSt-AP4Y5l">
+                  <img src="https://drive.google.com/uc?export=download&id=1h2_nFMWVLYvVg_vORr0P_Ejefv9zBGEo">
+                  <img src="https://drive.google.com/uc?export=download&id=1s02uu-kF313kzE5ynFrJm45XoCwmdhSN">
+                </div>
+            </ul>
+          </div>
+
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
