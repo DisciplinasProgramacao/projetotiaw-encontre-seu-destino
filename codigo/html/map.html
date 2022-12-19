@@ -1,92 +1,151 @@
-function initMap(): void {
-  const bounds = new google.maps.LatLngBounds();
-  const markersArray: google.maps.Marker[] = [];
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encontre Seu Destino - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="catalago.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+           
 
-  const map = new google.maps.Map(
-    document.getElementById("map") as HTMLElement,
-    {
-      center: { lat: 55.53, lng: 9.4 },
-      zoom: 10,
-    }
-  );
+  <body>
+      <!--NavBar-->
 
-  // initialize services
-  const geocoder = new google.maps.Geocoder();
-  const service = new google.maps.DistanceMatrixService();
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://drive.google.com/uc?export=download&id=1aXBWmrAdCzO7lVD5pLbMToTenYj-zNL_" alt="" width="180" height="90" class="d-inline-block align-text-center">
 
-  // build request
-  const origin1 = { lat: 55.93, lng: -3.118 };
-  const origin2 = "Greenwich, England";
-  const destinationA = "Stockholm, Sweden";
-  const destinationB = { lat: 50.087, lng: 14.421 };
+      </a>
 
-  const request = {
-    origins: [origin1, origin2],
-    destinations: [destinationA, destinationB],
-    travelMode: google.maps.TravelMode.DRIVING,
-    unitSystem: google.maps.UnitSystem.METRIC,
-    avoidHighways: false,
-    avoidTolls: false,
-  };
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          ENCONTRAR LUGARES
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="ba.html">Bahia</a></li>
+          <li><a class="dropdown-item" href="ma.html">Maranhão</a></li>
+          <li><a class="dropdown-item" href="pr.html">Paraná</a></li>
+          <li><a class="dropdown-item" href="rj.html">Rio de Janeiro</a></li>
+          <li><a class="dropdown-item" href="rr.html">Roraima</a></li>
+          <li><a class="dropdown-item" href="rs.html">Rio Grande do Sul</a></li>
+          <li><a class="dropdown-item" href="sp.html">São Paulo</a></li>
+        </ul>
+      </li>
+    
+      <div style="text-align: right;">
 
-  // put request on page
-  (document.getElementById("request") as HTMLDivElement).innerText =
-    JSON.stringify(request, null, 2);
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-  // get distance matrix response
-  service.getDistanceMatrix(request).then((response) => {
-    // put response
-    (document.getElementById("response") as HTMLDivElement).innerText =
-      JSON.stringify(response, null, 2);
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
 
-    // show on map
-    const originList = response.originAddresses;
-    const destinationList = response.destinationAddresses;
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="catalago.html">Pacotes</a>
 
-    deleteMarkers(markersArray);
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="map.html">Nosso Mapa</a>
 
-    const showGeocodedAddressOnMap = (asDestination: boolean) => {
-      const handler = ({ results }: google.maps.GeocoderResponse) => {
-        map.fitBounds(bounds.extend(results[0].geometry.location));
-        markersArray.push(
-          new google.maps.Marker({
-            map,
-            position: results[0].geometry.location,
-            label: asDestination ? "D" : "O",
-          })
-        );
-      };
+                
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="perfil.html">Perfil</a>
+                
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login.html">Conectar</a>
+            </li>           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-      return handler;
-    };
+  <div class="container">
+    <p><br>
+    <h1 class="text-center"> Mapa </h1>
+    <p>
+    <h5>
+      <div class="text-center"> Encontre seu destino pelo nosso mapa </div>
+      </p>
+    </h5>
+    <section class="row align-items-center">
+      <p></p></div>
 
-    for (let i = 0; i < originList.length; i++) {
-      const results = response.rows[i].elements;
+      <iframe
+      width="100%"
+      height="650"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDFHSHXXRbvtXQqugNW72gZmioVPOVh8gc
+        &q=bondinho+pao+de+acucar">
+        <section class="row align-items-center,">
+    </iframe>
 
-      geocoder
-        .geocode({ address: originList[i] })
-        .then(showGeocodedAddressOnMap(false));
+    <!--Rodape-->
+    <footer>
+      <div class="rodape">
 
-      for (let j = 0; j < results.length; j++) {
-        geocoder
-          .geocode({ address: destinationList[j] })
-          .then(showGeocodedAddressOnMap(true));
-      }
-    }
-  });
-}
+        <div class="row p-5 ">
 
-function deleteMarkers(markersArray: google.maps.Marker[]) {
-  for (let i = 0; i < markersArray.length; i++) {
-    markersArray[i].setMap(null);
-  }
 
-  markersArray = [];
-}
+          <div class="col-sm-12  col-md-4 text-start">
+            <ul>
+              <h5>Encontre Seu Destino</h5>
+              <li>
+                <a class="nav-link active" aria-current="page" href="#">Sobre nós</a>
+              </li>
 
-declare global {
-  interface Window {
-    initMap: () => void;
-  }
-}
-window.initMap = initMap;
+              <li>
+                <a class="nav-link active" aria-current="page" href="#">Termos</a>
+              </li>
+              
+              <li>
+                <a class="nav-link active" aria-current="page" href="#">Central de Ajuda</a>
+              </li>
+
+            </ul>
+
+
+          </div>
+
+
+          <div class="col p-3 col-sm-12  col-md-4  footer_area_nome">
+            ENCONTRE SEU DESTINO  <br> Trabalho academico Puc Minas - 2022
+          </div>
+
+
+          <div class="col-sm-12  col-md-4 text-end">
+            <h5>Contato</h5>
+            <ul>
+              <li>E-mail: central@gmail.com.br</li>
+              <li>SAC 31 9121 8987</li>
+              
+              <h5 class="py-3">Redes Sociais</h5>
+              <div>
+                  <img src="https://drive.google.com/uc?export=download&id=1f55YLPhDNiiwP83Hsw8dUgkyhdLefnWS">
+                  <img src="https://drive.google.com/uc?export=download&id=1TKb1suA-TIHXQQv19nuChUvSt-AP4Y5l">
+                  <img src="https://drive.google.com/uc?export=download&id=1h2_nFMWVLYvVg_vORr0P_Ejefv9zBGEo">
+                  <img src="https://drive.google.com/uc?export=download&id=1s02uu-kF313kzE5ynFrJm45XoCwmdhSN">
+                </div>
+            </ul>
+          </div>
+
+        </div>
+        <div class="row">
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
