@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+
+
+.heading {
+  font-size: 1.5em;
+  vertical-align: top;
+  margin-bottom: 12px;
+}
+
+
+.content-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.button {
+  align-items: center;
+  background: #e5efe9;
+  border: 1px solid #5a72b5;
+  border-radius: 4px;
+  color: #121943;
+  cursor: pointer;
+  display: flex;
+  font-size: 1em;
+  font-weight: 700;
+  height: 40px;
+  justify-content: center;
+  width: 150px;
+}
+
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.input-wrapper .label {
+  align-items: baseline;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 16px;
+  text-decoration: none;
+  width: 16px;
+}
+
+.modal-wrapper {
+  
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#modal {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal1 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal2 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal3 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal4 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal5 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal6 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal7 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal8 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal9 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal1:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal2:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal3:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal4:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal5:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal6:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal7:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal8:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal9:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal1 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal2 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal3 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal4 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal5 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal6 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal7 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal8 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal9 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+.outside-trigger {
+  bottom: 0;
+  cursor: default;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+h10 {
+  
+  font-size: 50px;
+  background-color: #3498DB ;
+}
+.button__link {
+  text-decoration: none;
+}
+.buttonClass {
+  font-size:25px;
+  font-family:Arial;
+  width:140px;
+  height:50px;
+  border-width:1px;
+  color:rgba(255, 255, 255, 1);
+  border-color:rgba(255, 255, 255, 1);
+  font-weight:bold;
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+  border-bottom-left-radius:28px;
+  border-bottom-right-radius:28px;
+  text-shadow: 1px 1px 0px rgba(7, 56, 252, 1);
+  background:rgba(80, 108, 184, 1);
+}
+
+.buttonClass:hover {
+  background: rgba(74, 144, 226, 1)
+}
