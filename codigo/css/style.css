@@ -61,24 +61,85 @@
   position: absolute;
   right: 0;
   top: 0;
-}.modal-wrapper1 {
-  
-  align-items: center;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
-
 #modal {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal1 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal2 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal3 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal4 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal5 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal6 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal7 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal8 {
+  opacity: 0;
+  visibility: hidden;
+}
+#modal9 {
   opacity: 0;
   visibility: hidden;
 }
 
 #modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal1:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal2:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal3:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal4:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal5:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal6:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal7:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal8:target {
+  opacity: 1;
+  visibility: visible;
+}
+#modal9:target {
   opacity: 1;
   visibility: visible;
 }
@@ -88,7 +149,47 @@
   width: 100%;
   z-index: 1;
 }
-#modal .modal-body1 {
+#modal1 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal2 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal3 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal4 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal5 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal6 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal7 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal8 .modal-body {
+  max-width: 500px;
+  width: 100%;
+  z-index: 1;
+}
+#modal9 .modal-body {
   max-width: 500px;
   width: 100%;
   z-index: 1;
