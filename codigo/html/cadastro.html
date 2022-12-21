@@ -81,11 +81,11 @@
 
 				<form class="login100-form validate-form">
 					<span class="login100-form-title">
-						Login
+						Cadastro
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<label for=""></label><input class="input100" type="text" name="email" placeholder="Email" id="login1"></label>
+						<input class="input100" type="text" name="email" placeholder="Email" id="login1">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -93,7 +93,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<label for=""><input class="input100" type="password" name="pass" placeholder="Senha" id="Senha1"></label>
+						<input class="input100" type="password" name="pass" placeholder="Senha" id="Senha1">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -101,16 +101,9 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" input type="submit" onclick="logar(); return false">
-							Login
+						<button class="login100-form-btn" input type="submit" onclick="logar(); return fals">
+							Crie sua conta
 						</button>
-					</div>
-
-					<div class="text-center p-t-136">
-						<a class="nav-link active" aria-current="page" href="cadastro.html">Crie sua conta
-						
-							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-						</a>
 					</div>
 				</form>
         <script>
@@ -120,14 +113,14 @@
             var senha = document.getElementById('Senha1').value;
 
 
-            if(login == "admin@gmail.com" && senha == "admin"){
+            if(login == "admin" && senha == "admin"){
               alert('Login efetuado com sucesso!');
               location.href = "perfil.html";
             }else{
-              alert('Usuário ou senha incorretos');
+              alert('Agradecemos, em breve vamos te enviar seu login e senha para que seja feito o seu primeiro acesso!');
               location.href = "login.html";
+            }
           }
-        }
         </script>
 			</div>
 		</div>
