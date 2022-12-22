@@ -77,8 +77,12 @@
     </h5>
     <section class="row align-items-center">
       <p></p></div>
+     <!-- correção do professor -->
+      <div id="mostrarMapa">
 
-      <iframe
+      </div>
+      <!-- código do repositório
+        <iframe
       width="100%"
       height="650"
       style="border:0"
@@ -89,6 +93,11 @@
         &q=bondinho+pao+de+acucar">
         <section class="row align-items-center,">
     </iframe>
+
+      
+      
+      -->
+      
 
 
   <!--Rodape-->
@@ -144,7 +153,31 @@
       <div class="row">
       </div>
     </div>
+    
   </footer>
+  <script>
+    //correção do professor
+    let usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"))
+    let estado="Ceará"
+    if(usuarioLogado){
+      estado = usuarioLogado.estadoCadastro
+    }
+    
+    let mapa = `
+    <iframe
+      width="100%"
+      height="650"
+      style="border:0"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDFHSHXXRbvtXQqugNW72gZmioVPOVh8gc
+        &q=${estado}">
+        <section class="row align-items-center,">
+    </iframe>`
+    document.getElementById("mostrarMapa").innerHTML= mapa;
+    //fim da correçao
+  </script>
 
   </body>
 </html>

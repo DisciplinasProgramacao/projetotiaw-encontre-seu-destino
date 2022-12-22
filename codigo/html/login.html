@@ -101,7 +101,12 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" input type="submit" onclick="logar(); return false">
+            <!-- correção do professor -->
+						<button class="login100-form-btn" input type="button" onclick="logarCorreto();">
+
+              <!-- código do repositório 
+              <button class="login100-form-btn" input type="submit" onclick="logar(); return false"></button>
+              -->
 							Login
 						</button>
 					</div>
@@ -114,7 +119,31 @@
 					</div>
 				</form>
         <script>
-          function logar(){
+          //correção do professor
+          function logarCorreto(){
+            let users = JSON.parse(localStorage.getItem("cadastroPessoas"))
+            if(!users){
+              alert("Usuário não cadastrado")
+              return
+            }
+
+            var login = document.getElementById('login1').value;
+            var senha = document.getElementById('Senha1').value;
+
+            users.forEach(usuario => {
+                if(login==usuario.emailCadastro && senha==usuario.senhaCadastro){
+                  alert("Bem vindo, "+login)
+                  localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
+                  document.location.href="./perfil.html";
+                  return;
+                }
+            });
+            alert("Usuário ou senha incorretos")
+
+          }
+          //fom da correção
+
+        function logar(){
 
             var login = document.getElementById('login1').value;
             var senha = document.getElementById('Senha1').value;

@@ -91,7 +91,18 @@
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
-
+          <!-- inserção do professor para requisito de local -->
+          <div class="wrap-input100 validate-input" data-validate = "Escolha um estado">
+						<span> Estado: </span><select id="selectEstado">
+              <option value="Bahia">BA</option>
+              <option value="Maranão">MA</option>
+              <option value="Rio de Janeiro">RJ</option>
+              <option value="Roraima">RR</option>
+            </select>
+           
+						</span>
+					</div>
+          <!-- fim da inserção -->
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<input class="input100" type="password" name="pass" placeholder="Senha" id="Senha1">
 						<span class="focus-input100"></span>
@@ -101,12 +112,43 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
+            <!-- correção do professor -->
+            <button class="login100-form-btn" input type="button" onclick="cadastroCorreto();"></button>
+            
+            <!-- código do repositório
 						<button class="login100-form-btn" input type="submit" onclick="logar(); return fals">
+             --> 
 							Crie sua conta
 						</button>
 					</div>
 				</form>
         <script>
+          //correção do professor
+           function cadastroCorreto(){
+            let email = document.getElementById("login1").value
+            let senha = document.getElementById("Senha1").value
+            let estado = document.getElementById("selectEstado").value
+           
+            let cadastro = JSON.parse(localStorage.getItem("cadastroPessoas"))
+            if (!cadastro) cadastro = [];
+
+            let novoUsuario = {
+              emailCadastro: email,
+              senhaCadastro: senha,
+              estadoCadastro: estado
+            }
+
+            cadastro.push(novoUsuario)
+
+            localStorage.setItem("cadastroPessoas", JSON.stringify(cadastro))
+            alert("Usuário "+email+" cadastrado.")
+          } 
+
+
+
+          // fim correção
+
+          //abaixo código do repositório
           function logar(){
 
             var login = document.getElementById('login1').value;
