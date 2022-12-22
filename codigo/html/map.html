@@ -75,12 +75,27 @@
       <div class="text-center"> Encontre seu destino pelo nosso mapa </div>
       </p>
     </h5>
+    <!-- correção do professor -->
     <section class="row align-items-center">
       <p></p></div>
-     <!-- correção do professor -->
+      <div>
+      <div class="wrap-input100 validate-input" data-validate = "Escolha um estado">
+        <span> Estado: </span><select id="selectEstado">
+          <option value="Bahia">BA</option>
+          <option value="Maranão">MA</option>
+          <option value="Rio de Janeiro">RJ</option>
+          <option value="Roraima">RR</option>
+        </select>
+        <button class="login100-form-btn" input type="button" onclick="carregarMapa(document.getElementById('selectEstado').value);">Confirmar</button>
+        </span>
+      </div>
+    </div>
+     
       <div id="mostrarMapa">
 
       </div>
+      <!-- fim correção-->
+
       <!-- código do repositório
         <iframe
       width="100%"
@@ -156,13 +171,20 @@
     
   </footer>
   <script>
+    document.body.onload = () => {
+      carregarMapa();
+    }
     //correção do professor
+    function carregarMapa(escolha){
+    
     let usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"))
     let estado="Ceará"
     if(usuarioLogado){
       estado = usuarioLogado.estadoCadastro
     }
-    
+    if(escolha){
+      estado = escolha
+    }
     let mapa = `
     <iframe
       width="100%"
@@ -176,6 +198,7 @@
         <section class="row align-items-center,">
     </iframe>`
     document.getElementById("mostrarMapa").innerHTML= mapa;
+    }
     //fim da correçao
   </script>
 
